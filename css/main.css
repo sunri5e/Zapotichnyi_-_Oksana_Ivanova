@@ -1644,13 +1644,20 @@ textarea.oi-form-control {
   margin-top: 35px; }
 
 .oi-popup {
-  position: none;
   background-color: #fff;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
   z-index: 2; }
+
+.oi-slider {
+  overflow-x: auto;
+  white-space: nowrap; }
+
+.oi-slider--item {
+  display: inline-block;
+  height: 300px; }
 
 .oi-header {
   position: relative;
