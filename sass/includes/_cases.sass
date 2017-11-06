@@ -1,0 +1,24 @@
+.oi-case
+  display: grid
+  grid-template-columns: 60px 1fr
+  color: rgba(#fff, .5)
+  padding: 0 7px
+  & > *
+    grid-column: 2
+  &.mod-small
+    padding: 0
+
+.oi-case--title
+  font-size: 18px
+  line-height: 1.17
+  font-weight: 700
+  .oi-case.mod-small &
+    font-size: 15px
+
+.oi-case--pic
+  grid-column: 1
+  grid-row: span 2
+  padding-right: 20px
+  text-align: center
+  img
+    height: 40px

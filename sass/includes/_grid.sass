@@ -1,0 +1,35 @@
+.oi-grid-row
+  display: grid
+  grid-template-columns: repeat(17, 1fr)
+  .oi-span-7
+    grid-column: span 7
+  .oi-span-8
+    grid-column: span 8
+  .oi-span-9
+    grid-column: span 9
+  .oi-span-10
+    grid-column: span 10
+  .oi-span-11
+    grid-column: span 11
+  .oi-span-12
+    grid-column: span 12
+  .oi-span-13
+    grid-column: span 13
+  .oi-offset-2
+    margin-left: calc(1020px / 17 * 2)
+  .oi-offset-4
+    margin-left: calc(1020px / 17 * 4)
+  &.mod-portfolio
+    grid-template-columns: 1fr 1fr
+    grid-gap: 10px
+    padding: 0 10px 10px
+  &.mod-cases
+    grid-template-columns: 1fr 1fr
+    grid-gap: 60px 120px
+    padding-left: 10px
+    padding-right: 10px
+    margin: 80px 0
+    &.mod-small
+      grid-gap: 30px 60px
+      margin: 0
+      padding: 0

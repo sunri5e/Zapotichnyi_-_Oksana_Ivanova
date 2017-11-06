@@ -1,0 +1,30 @@
+.oi-form-group
+  position: relative
+  & + &
+    margin-top: 25px
+
+.oi-form-control
+  width: 100%
+  border: none
+  border-bottom: 2px solid rgba(#000, .2)
+  height: 35px
+  outline: none
+  font-size: 15px
+  & + label
+    font-size: 18px
+    font-weight: 600
+    line-height: 2.0
+    color: #000
+    position: absolute
+    left: 0
+    top: 0
+    transition: top .2s, font-size .2s
+  &:focus:not(textarea) + label
+    top: -18px
+    font-size: 15px
+
+textarea.oi-form-control
+  height: 160px
+  border: 2px solid rgba(#000, .2)
+  padding: 5px
+  margin-top: 35px

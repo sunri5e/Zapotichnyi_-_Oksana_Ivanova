@@ -1,0 +1,61 @@
+.oi-thumb
+  position: relative
+  height: 390px
+  position: relative
+  overflow: hidden
+  &:hover
+    &:before,
+    .oi-thumb--title,
+    .oi-thumb--descr
+      opacity: 1
+    .oi-thumb--title
+      top: 110px
+    .oi-thumb--descr
+      top: 60px
+    .oi-thumb--pic
+      transform: translate(-50%, -50%) scale(1.1)
+  &:before
+    content: ''
+    display: block
+    width: 100%
+    height: 100%
+    background-color: rgba(#000, .6)
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 1
+    transition: opacity .3s
+
+.oi-thumb:before,
+.oi-thumb--title,
+.oi-thumb--descr
+  opacity: 0
+
+.oi-thumb--pic
+  position: absolute
+  left: 50%
+  top: 50%
+  max-width: 100%
+  transform: translate(-50%, -50%)
+  transition: transform .3s
+
+.oi-thumb--title,
+.oi-thumb--descr
+  color: #fff
+  left: 60px
+  position: absolute
+  transition: opacity .3s, top .3s
+
+.oi-thumb--title
+  font-size: 36px
+  font-weight: 300
+  line-height: 1
+  top: 130px
+  z-index: 2
+
+.oi-thumb--descr
+  font-size: 24px
+  font-weight: bold
+  line-height: 0.88
+  top: 80px
+  z-index: 2
