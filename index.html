@@ -56,7 +56,7 @@
   <section class="oi-section mod-portfolio oi-grid-row">
     <a href="#" class="oi-thumb" data-open-gallery>
       <!-- <img src="./img/projs/proj-5.jpg" srcset="./img/projs/proj-1.jpg 1x, ./img/projs/proj-2.jpg 2x, ./img/projs/proj-3.jpg 3x, ./img/projs/proj-4.jpg 4x, ./img/projs/proj-5.jpg 5x"> -->
-      <img src="img/projs/proj-1.jpg" srcset="img/projs/proj-1.jpg.png 1x, img/projs/proj-2@2x.jpg 2x, img/projs/proj-3@3x.jpg 3x">
+      <img src="img/projs/proj-1.jpg" srcset="img/projs/proj-1.jpg 1x, img/projs/proj-2@2x.jpg 2x, img/projs/proj-3@3x.jpg 3x">
       <h3 class="oi-thumb--title">White <br>Light</h3>
       <h4 class="oi-thumb--descr">142 m2</h4>
       <div class="oi-thumb--slider-src">
@@ -71,7 +71,13 @@
       </div>
     </a>
     <a href="#" class="oi-thumb" data-open-gallery>
-      <img src="./img/projs/proj-2@2x.jpg" alt="Project preview 2" class="oi-thumb--pic">
+      <picture>
+        <source srcset="./img/projs/proj-5.jpg 1x, ./img/projs/proj-6.jpg 2x"
+                media="(min-width: 401px)" />
+        <source srcset="./img/projs/proj-7.jpg 1x, ./img/projs/proj-8.jpg 2x"
+                media="(max-width: 400px)" />
+        <img src="./img/projs/proj-9.jpg" alt="A rad wolf" />
+      </picture>
       <h3 class="oi-thumb--title">Simple <br>Life</h3>
       <h4 class="oi-thumb--descr">92 m2</h4>
       <div class="oi-thumb--slider-src">
