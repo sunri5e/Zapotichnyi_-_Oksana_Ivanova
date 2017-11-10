@@ -5,6 +5,9 @@
 
 .oi-header--address
   font-size: 18px
+  line-height: 1.1
+  @media(min-width: $screen-md + 1)
+    line-height: inherit
   a
     text-decoration: none
     &.mod-small
@@ -16,12 +19,16 @@
   padding-top: 30px
   padding-bottom: 30px
   justify-content: space-between
+  align-items: center
 
 .oi-header-nav--logo
   height: 47px
 
 .oi-social
   display: flex
+  .oi-text-center-xs &
+    @media(max-width: $screen-sm + 1)
+      justify-content: center
   & > li + li
     margin-left: 20px
   img

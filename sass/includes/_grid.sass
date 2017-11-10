@@ -1,34 +1,100 @@
 .oi-grid-row
   display: grid
   grid-template-columns: repeat(17, 1fr)
-  .oi-span-7
-    grid-column: span 7
-  .oi-span-8
-    grid-column: span 8
-  .oi-span-9
-    grid-column: span 9
-  .oi-span-10
-    grid-column: span 10
-  .oi-span-11
-    grid-column: span 11
-  .oi-span-12
-    grid-column: span 12
-  .oi-span-13
-    grid-column: span 13
-  .oi-offset-2
-    margin-left: calc(1020px / 17 * 2)
-  .oi-offset-4
-    margin-left: calc(1020px / 17 * 4)
+  .oi-xs-span-17
+    grid-column: span 17
+  @media(min-width: $screen-sm + 1)
+    .oi-sm-span-8
+      grid-column: span 8
+    .oi-sm-span-9
+      grid-column: span 9
+    .oi-sm-span-10
+      grid-column: span 10
+    .oi-sm-span-11
+      grid-column: span 11
+    .oi-sm-span-12
+      grid-column: span 12
+    .oi-sm-span-13
+      grid-column: span 13
+    .oi-sm-offset-1
+      margin-left: calc((100vw - 60px) / 17)
+  @media(min-width: $screen-md + 1)
+    .oi-span-7
+      grid-column: span 7
+    .oi-span-8
+      grid-column: span 8
+    .oi-span-9
+      grid-column: span 9
+    .oi-span-10
+      grid-column: span 10
+    .oi-span-11
+      grid-column: span 11
+    .oi-span-12
+      grid-column: span 12
+    .oi-span-13
+      grid-column: span 13
+    .oi-offset-2
+      margin-left: calc((100vw - 120px) / 17 * 2)
+    .oi-offset-4
+      margin-left: calc((100vw - 120px) / 17 * 4)
+  @media(min-width: $screen-lg + 1)
+    &.mod-align-c1
+      & > *
+        grid-column-start: 1
+      .oi-lg-span-6
+        grid-column-end: 7
+      .oi-lg-span-7
+        grid-column-end: 8
+      .oi-lg-span-8
+        grid-column-end: 9
+      .oi-lg-span-9
+        grid-column-end: 10
+    .oi-lg-span-6
+      grid-column: span 6
+    .oi-lg-span-7
+      grid-column: span 7
+    .oi-lg-span-8
+      grid-column: span 8
+    .oi-lg-span-9
+      grid-column: span 9
+    .oi-lg-offset-1
+      margin-left: calc((100vw - 240px) / 17)
+    .oi-lg-offset-2
+      margin-left: calc((100vw - 240px) / 17 * 2)
+    .oi-lg-offset-3
+      margin-left: calc((100vw - 240px) / 17 * 3)
+    .oi-lg-offset-4
+      margin-left: calc((100vw - 240px) / 17 * 4)
+    .oi-lg-offset-5
+      margin-left: calc((100vw - 240px) / 17 * 5)
+  @media(max-width: $screen-sm + 1)
+    .oi-xs-first
+      grid-row: 1
   &.mod-portfolio
-    grid-template-columns: 1fr 1fr
     grid-gap: 10px
-    padding: 0 10px 10px
+    padding: 0 7px 10px
+    grid-template-columns: 1fr
+    @media(min-width: $screen-sm + 1)
+      padding: 0 10px 10px
+      grid-template-columns: 1fr 1fr
   &.mod-cases
     grid-template-columns: 1fr 1fr
-    grid-gap: 60px 120px
-    padding-left: 10px
-    padding-right: 10px
-    margin: 80px 0
+    margin: 55px 0
+    grid-gap: 30px
+    @media(min-width: $screen-sm + 1)
+      grid-gap: 55px 45px
+      margin: 80px 0
+    @media(min-width: $screen-md + 1)
+      grid-gap: 60px 120px
+      padding-left: 10px
+      padding-right: 10px
+    @media(min-width: $screen-lg + 1)
+      margin: 110px 0
+      grid-gap: 60px 100px
+      padding-left: 180px
+      padding-right: 180px
+      &.mod-lg-col-3
+        grid-template-columns: 1fr 1fr 1fr
     &.mod-small
       grid-gap: 30px 60px
       margin: 0

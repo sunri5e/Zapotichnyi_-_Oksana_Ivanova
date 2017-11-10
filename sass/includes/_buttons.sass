@@ -5,15 +5,23 @@
   text-align: center
   text-decoration: none
   display: inline-block
-  padding: 18px 40px 19px
+  padding: 18px 35px 19px
   border-radius: 25px
   transition: background-color .3s
   height: 50px
+  white-space: nowrap
+  text-overflow: ellipsis
+  overflow: hidden
   img
     height: 12px
     margin-right: 10px
   & + &
     margin-left: 37px
+  &.oi-xs-block
+    & + &
+      @media(max-width: $screen-sm + 1)
+        margin-left: 0
+        margin-top: 20px
   &.mod-primary
     color: #000
     background-color: $color-primary
@@ -45,6 +53,9 @@
     align-items: center
     padding: 0
     text-decoration: underline
+    .oi-text-center-xs &
+      @media(max-width: $screen-sm + 1)
+        justify-content: center
     &:hover
       text-decoration: none
     img

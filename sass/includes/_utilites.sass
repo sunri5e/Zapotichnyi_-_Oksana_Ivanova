@@ -2,8 +2,14 @@
 .oi-color-white
   color: #fff
 
+
+
 .oi-color-black
   color: #000
+
+.oi-color-black-xs
+  @media(max-width: $screen-sm + 1)
+    color: #000
 
 .oi-color-light
   color: #999
@@ -15,6 +21,11 @@
 
 .oi-text-center
   text-align: center
+
+.oi-text-center-xs
+  text-align: center
+  @media(min-width: $screen-sm + 1)
+    text-align: inherit
 // end Alignments
 
 // BG
@@ -32,4 +43,29 @@
   background-color: $greyish-brown-two
 .oi-bg-alternative
   background-color: rgba($bg-alternative, .2)
+  @media(min-width: $screen-lg + 1)
+    &.oi-section
+      padding-top: 180px
+      padding-bottom: 180px
+
+@media(max-width: $screen-sm + 1)
+  .oi-bg-alternative-xs
+    background-color: rgba($bg-alternative, .2)
 // end BG
+
+// Visibility
+.oi-visible-xs
+  display: initial
+  @media(min-width: $screen-sm + 1)
+    display: none
+
+.oi-hidden-lg
+  @media(min-width: $screen-lg + 1)
+    display: none
+// end Visibility
+
+// Display
+@media(max-width: $screen-sm + 1)
+  .oi-xs-block
+    display: block
+// end Display

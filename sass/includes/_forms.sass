@@ -6,10 +6,13 @@
 .oi-form-control
   width: 100%
   border: none
-  border-bottom: 2px solid rgba(#000, .2)
   height: 35px
   outline: none
   font-size: 15px
+  border-bottom: 1px solid rgba(#000, .2)
+  background: transparent
+  @media(min-width: $screen-sm + 1)
+    border-bottom: 2px solid rgba(#000, .2)
   & + label
     font-size: 18px
     font-weight: 600
@@ -25,6 +28,9 @@
 
 textarea.oi-form-control
   height: 160px
-  border: 2px solid rgba(#000, .2)
+  border: 1px solid rgba(#000, .2)
   padding: 5px
   margin-top: 35px
+  resize: none
+  @media(min-width: $screen-sm + 1)
+    border: 2px solid rgba(#000, .2)
