@@ -1924,6 +1924,8 @@ textarea.oi-form-control {
     @media (min-width: 1025px) {
       .oi-popup--header h3 {
         font-size: 48px; } }
+    .oi-popup--header h3 + * {
+      margin-top: 10px; }
   .oi-popup--header h4 {
     font-weight: 300;
     line-height: 1;
