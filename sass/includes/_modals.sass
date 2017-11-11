@@ -5,55 +5,65 @@
   height: 100%
   left: 0
   top: 0
-  z-index: 2
+  z-index: 5
   padding-top: 60px
   padding-bottom: 30px
   display: none
+  overflow: auto
   &.mod-open
     display: block
+  &.mod-flex
+    align-items: center
+    &.mod-open
+      display: flex
+      &.mod-reset-flex-xs
+        @media(max-width: $screen-sm)
+          display: block
 
 .oi-popup--header
-  display: flex
-  justify-content: space-between
   margin-bottom: 50px
+  h3
+    font-size: 30px
+    font-weight: 300
+    line-height: 1.0
+    color: #000
+    @media(min-width: $screen-md + 1)
+      font-size: 48px
   h4
-    font-size: 36px
     font-weight: 300
     line-height: 1
-    white-space: nowrap
-    overflow: hidden
-    text-overflow: ellipsis
+    font-size: 30px
+    @media(min-width: $screen-sm + 1)
+      font-size: 36px
+
+.oi-popup--header--icon
+  width: 85px
+  & + *
+    margin-top: 25px
+    @media(min-width: $screen-md + 1)
+      margin-top: 40px
 
 .oi-popup--close
   width: 26px
   cursor: pointer
+  position: absolute
+  right: 30px
+  top: 30px
+  @media(min-width: $screen-md + 1)
+    top: 60px
+    right: 60px
+  &.mod-xs-static
+    @media(max-width: $screen-sm)
+      position: static
+      &:first-child
+        margin: 0 auto 60px
+      &:last-child
+        margin: 60px auto 20px
+  &.oi-visible-xs
+    @media(max-width: $screen-sm)
+      display: block
 
-
-
-.oi-slider
-  overflow-x: auto
-  display: flex
-  .mCSB_container
-    display: -webkit-flex
-    display: flex
-  picture
-    display: block
-    &:first-child
-      margin-left: 25px
-    & + picture
-      margin-left: 10px
-    img
-      -webkit-flex-shrink: 0
-      flex-shrink: 0
-      height: calc(100vh - 205px)
-
-.mCS-dark-3.mCSB_scrollTools_horizontal
-  .mCSB_dragger .mCSB_dragger_bar
-    height: 8px
-  .mCSB_draggerRail
-    height: 2px
-    margin: 8px 0
-
-.mCSB_scrollTools.mCSB_scrollTools_horizontal
-  left: 25px
-  right: 10vw
+.oi-popup--body
+  max-width: 800px
+  textarea.oi-form-control
+    height: 120px

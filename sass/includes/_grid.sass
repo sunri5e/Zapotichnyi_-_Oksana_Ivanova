@@ -4,6 +4,8 @@
   .oi-xs-span-17
     grid-column: span 17
   @media(min-width: $screen-sm + 1)
+    .oi-sm-span-6
+      grid-column: span 6
     .oi-sm-span-8
       grid-column: span 8
     .oi-sm-span-9
@@ -16,9 +18,19 @@
       grid-column: span 12
     .oi-sm-span-13
       grid-column: span 13
+    .oi-sm-span-14
+      grid-column: span 14
     .oi-sm-offset-1
       margin-left: calc((100vw - 60px) / 17)
+    .oi-sm-offset-2
+      margin-left: calc((100vw - 60px) / 17 * 2)
+    .oi-sm-offset-3
+      margin-left: calc((100vw - 60px) / 17 * 3)
+    .oi-sm-offset-4
+      margin-left: calc((100vw - 60px) / 17 * 4)
   @media(min-width: $screen-md + 1)
+    .oi-span-6
+      grid-column: span 6
     .oi-span-7
       grid-column: span 7
     .oi-span-8
@@ -33,10 +45,14 @@
       grid-column: span 12
     .oi-span-13
       grid-column: span 13
+    .oi-offset-1
+      margin-left: calc((100vw - 120px) / 17)
     .oi-offset-2
       margin-left: calc((100vw - 120px) / 17 * 2)
     .oi-offset-4
       margin-left: calc((100vw - 120px) / 17 * 4)
+    .oi-offset-5
+      margin-left: calc((100vw - 120px) / 17 * 5)
   @media(min-width: $screen-lg + 1)
     &.mod-align-c1
       & > *

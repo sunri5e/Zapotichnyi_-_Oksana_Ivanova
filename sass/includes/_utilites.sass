@@ -2,14 +2,12 @@
 .oi-color-white
   color: #fff
 
-
-
 .oi-color-black
   color: #000
 
 .oi-color-black-xs
   @media(max-width: $screen-sm + 1)
-    color: #000
+    color: #000 !important
 
 .oi-color-light
   color: #999
@@ -55,8 +53,12 @@
 
 // Visibility
 .oi-visible-xs
-  display: initial
+  display: block
   @media(min-width: $screen-sm + 1)
+    display: none
+
+.oi-hidden-xs
+  @media(max-width: $screen-sm)
     display: none
 
 .oi-hidden-lg

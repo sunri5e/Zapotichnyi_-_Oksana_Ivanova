@@ -1,5 +1,8 @@
 .oi-form-group
   position: relative
+  &.mod-xs-offset
+    @media(max-width: $screen-sm)
+      margin-top: 25px
   & + &
     margin-top: 25px
 
@@ -22,7 +25,8 @@
     left: 0
     top: 0
     transition: top .2s, font-size .2s
-  &:focus:not(textarea) + label
+  &:focus:not(textarea) + label,
+  &.mod-filled:not(textarea) + label
     top: -18px
     font-size: 15px
 

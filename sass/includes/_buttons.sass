@@ -12,6 +12,9 @@
   white-space: nowrap
   text-overflow: ellipsis
   overflow: hidden
+  border: none
+  &:focus
+    outline: none
   img
     height: 12px
     margin-right: 10px
@@ -33,6 +36,12 @@
     border: 1px solid
     &:hover
       background-color: rgba(#fff, .1)
+  &.mod-ghost-reverse
+    color: #000
+    background-color: transparent
+    border: 1px solid rgba(#000, .2)
+    &:hover
+      background-color: rgba(#000, .1)
   &.mod-light
     color: #000
     background-color: #fff
