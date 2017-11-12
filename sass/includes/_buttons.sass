@@ -7,12 +7,13 @@
   display: inline-block
   padding: 18px 35px 19px
   border-radius: 25px
-  transition: background-color .3s
+  transition: background-color .3s, border .3s
   height: 50px
   white-space: nowrap
   text-overflow: ellipsis
   overflow: hidden
   border: none
+  cursor: pointer
   &:focus
     outline: none
   img
@@ -29,13 +30,14 @@
     color: #000
     background-color: $color-primary
     &:hover
-      background-color: darken($color-primary, 3%)
+      background-color: lighten($color-primary, 35%)
   &.mod-ghost
     color: #fff
     background-color: transparent
-    border: 1px solid
+    border: 1px solid rgba(#fff, .2)
     &:hover
-      background-color: rgba(#fff, .1)
+      border: 1px solid rgba(#fff, 0)
+      background-color: rgba(#fff, .2)
   &.mod-ghost-reverse
     color: #000
     background-color: transparent
@@ -46,12 +48,12 @@
     color: #000
     background-color: #fff
     &:hover
-      background-color: darken(#fff, 3%)
+      background-color: rgba(#fff, .6)
   &.mod-dark
     color: #fff
     background-color: #000
     &:hover
-      background-color: lighten(#000, 15%)
+      background-color: rgba(#000, .7)
   &.mod-file
     display: flex
     font-size: 15px
@@ -61,12 +63,16 @@
     color: #000
     align-items: center
     padding: 0
-    text-decoration: underline
+    text-decoration: none
     .oi-text-center-xs &
       @media(max-width: $screen-sm + 1)
         justify-content: center
+    span
+      border-bottom: 1px solid rgba(#000, .4)
+      transition: border-bottom .15s
     &:hover
-      text-decoration: none
+      span
+        border-bottom: 1px solid rgba(#000, 1)
     img
       height: 33px
       margin-right: 5px

@@ -17,6 +17,8 @@
       padding: 90px 0
     @media(min-width: $screen-lg + 1)
       padding: 120px 0
+  &.mod-hero
+    padding-top: 100px
   &.mod-fullscreen
     min-height: 100vh
     position: relative
@@ -46,12 +48,45 @@
   &.mod-img-bg
     background-position: center
     background-size: cover
+    &.mod-bg-1
+      background-image: url('../img/bg-1-mobile.jpg')
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx)
+        background-image: url('../img/bg-1-mobile@2x.jpg')
+      @media only screen and (min-width: $screen-md + 1)
+        background-image: url('../img/bg-1.jpg')
+      @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: $screen-md + 1), only screen and ( min--moz-device-pixel-ratio: 2) and (min-width: $screen-md + 1), only screen and ( -o-min-device-pixel-ratio: 2/1) and (min-width: $screen-md + 1), only screen and (        min-device-pixel-ratio: 2)      and (min-width: $screen-md + 1), only screen and ( min-resolution: 192dpi) and (min-width: $screen-md + 1), only screen and ( min-resolution: 2dppx)  and (min-width: $screen-md + 1) 
+        background-image: url('../img/bg-1@2x.jpg')
+    &.mod-bg-2
+      background-image: url('../img/bg-2-mobile.jpg')
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx)
+        background-image: url('../img/bg-2-mobile@2x.jpg')
+      @media only screen and (min-width: $screen-md + 1)
+        background-image: url('../img/bg-2.jpg')
+      @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: $screen-md + 1), only screen and ( min--moz-device-pixel-ratio: 2) and (min-width: $screen-md + 1), only screen and ( -o-min-device-pixel-ratio: 2/1) and (min-width: $screen-md + 1), only screen and (        min-device-pixel-ratio: 2)      and (min-width: $screen-md + 1), only screen and ( min-resolution: 192dpi) and (min-width: $screen-md + 1), only screen and ( min-resolution: 2dppx)  and (min-width: $screen-md + 1) 
+        background-image: url('../img/bg-2@2x.jpg')
   &.mod-ovh-y
     overflow-y: hidden
   @media(max-width: $screen-sm + 1)
     &.mod-xs-reset-overlay
       &:before
         display: none
+
+.oi-section--success
+  display: flex
+  align-items: center
+  position: absolute
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  background-color: #fff
+  opacity: 0
+  pointer-events: none
+  transition: opacity .5s
+  &.mod-open
+    opacity: 1
+    pointer-events: auto
+
 
 .oi-xs-section
   @media(max-width: $screen-sm + 1)
@@ -78,6 +113,14 @@
   background-position: center
   background-size: cover
   pointer-events: none
+  &.mod-bg-3
+    background-image: url('../img/bg-3-mobile.jpg')
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx)
+      background-image: url('../img/bg-3-mobile@2x.jpg')
+    @media only screen and (min-width: $screen-md + 1)
+      background-image: url('../img/bg-3.jpg')
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: $screen-md + 1), only screen and ( min--moz-device-pixel-ratio: 2) and (min-width: $screen-md + 1), only screen and ( -o-min-device-pixel-ratio: 2/1) and (min-width: $screen-md + 1), only screen and (        min-device-pixel-ratio: 2)      and (min-width: $screen-md + 1), only screen and ( min-resolution: 192dpi) and (min-width: $screen-md + 1), only screen and ( min-resolution: 2dppx)  and (min-width: $screen-md + 1) 
+      background-image: url('../img/bg-3@2x.jpg')
   &:before
     content: ''
     width: 100%
@@ -154,10 +197,13 @@
   @media(min-width: $screen-lg + 1)
     margin-top: -50px
   a
-    text-decoration: underline
+    text-decoration: none
     color: inherit
-    &:hover
-      text-decoration: none
+    b
+      border-bottom: 1px solid rgba(#000, .4)
+      transition: border-bottom .15s
+      &:hover
+        border-bottom: 1px solid rgba(#000, 1)
 
 
 
@@ -171,6 +217,7 @@
   @media(min-width: $screen-sm + 1)
     margin: 0
     position: absolute
+    z-index: 2
     left: 47%
     bottom: -120px
   @media(min-width: $screen-md + 1)

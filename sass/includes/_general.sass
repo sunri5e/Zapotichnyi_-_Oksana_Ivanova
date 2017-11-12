@@ -23,6 +23,12 @@ img
     a
       color: #000
       text-decoration: none
+      span
+        display: inline-block
+        border-bottom: 1px solid rgba(#000, .4)
+        transition: border-bottom .15s
+      &:hover
+        span
+          border-bottom: 1px solid rgba(#000, 1)
       &.mod-small
         font-size: 15px
-        text-decoration: underline

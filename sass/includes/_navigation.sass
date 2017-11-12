@@ -9,12 +9,17 @@
   font-size: 18px
   line-height: 1.1
   @media(min-width: $screen-md + 1)
-    line-height: inherit
+    line-height: 1.2
   a
     text-decoration: none
+    span
+      border-bottom: 1px solid rgba(#fff, .4)
+      transition: border-bottom .15s
+    &:hover
+      span
+        border-bottom: 1px solid rgba(#fff, 1)
     &.mod-small
       font-size: 15px
-      text-decoration: underline
 
 .oi-header-nav
   display: flex
@@ -27,7 +32,10 @@
     padding-bottom: 60px
 
 .oi-header-nav--logo
-  height: 47px
+  display: block
+  line-height: 0
+  img
+    height: 47px
 
 .oi-social
   display: flex
@@ -38,3 +46,7 @@
     margin-left: 20px
   img
     height: 20px
+  a
+    transition: opacity .2s
+    &:hover
+      opacity: .7
