@@ -79,7 +79,7 @@
       } else {
         e.preventDefault();
         $.ajax({
-          url: "https://formspree.io/sunrise944@gmail.com", 
+          url: "https://formspree.io/office@oksanaivanova.com", 
           method: "POST",
           data: $(this).serialize(),
           dataType: "json"
@@ -103,7 +103,7 @@
       } else {
         e.preventDefault();
         $.ajax({
-          url: "https://formspree.io/sunrise944@gmail.com", 
+          url: "https://formspree.io/office@oksanaivanova.com", 
           method: "POST",
           data: $(this).serialize(),
           dataType: "json"
@@ -128,7 +128,7 @@
       } else {
         e.preventDefault();
         $.ajax({
-          url: "https://formspree.io/sunrise944@gmail.com", 
+          url: "https://formspree.io/office@oksanaivanova.com", 
           method: "POST",
           data: $(this).serialize(),
           dataType: "json"
@@ -153,7 +153,7 @@
       } else {
         e.preventDefault();
         $.ajax({
-          url: "https://formspree.io/sunrise944@gmail.com", 
+          url: "https://formspree.io/office@oksanaivanova.com", 
           method: "POST",
           data: $(this).serialize(),
           dataType: "json"

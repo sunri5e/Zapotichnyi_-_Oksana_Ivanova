@@ -1878,6 +1878,8 @@ img {
       grid-column: span 8; }
     .oi-grid-row .oi-lg-span-9 {
       grid-column: span 9; }
+    .oi-grid-row .oi-lg-offset-0 {
+      margin-left: 0; }
     .oi-grid-row .oi-lg-offset-1 {
       margin-left: calc((100vw - 240px) / 17); }
     .oi-grid-row .oi-lg-offset-2 {
