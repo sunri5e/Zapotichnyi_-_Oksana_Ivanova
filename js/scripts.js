@@ -4,10 +4,10 @@
     // Popup
     function bodyScroll(bool) {
       if (bool === true) {
-        $('body').removeClass('mod-disable-scroll')
+        $('html').removeClass('mod-disable-scroll')
         $('.oi-popup').scrollTop(0)
       } else if (bool === false) {
-        $('body').addClass('mod-disable-scroll');
+        $('html').addClass('mod-disable-scroll');
       } else {
         return
       }

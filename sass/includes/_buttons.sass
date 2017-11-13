@@ -14,6 +14,8 @@
   overflow: hidden
   border: none
   cursor: pointer
+  @media(max-width: $screen-sm + 1)
+    padding: 18px 25px 19px
   &:focus
     outline: none
   img
@@ -21,11 +23,6 @@
     margin-right: 10px
   & + &
     margin-left: 37px
-  &.oi-xs-block
-    & + &
-      @media(max-width: $screen-sm + 1)
-        margin-left: 0
-        margin-top: 20px
   &.mod-primary
     color: #000
     background-color: $color-primary
@@ -76,3 +73,13 @@
     img
       height: 33px
       margin-right: 5px
+  @media(max-width: $screen-sm + 1)
+    &.oi-xs-block
+      max-width: 350px
+    & + &
+      margin-left: 0
+      margin-top: 20px
+    .oi-text-center-xs &.oi-xs-block,
+    .oi-text-center &.oi-xs-block
+      margin-left: auto
+      margin-right: auto

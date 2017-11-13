@@ -1432,8 +1432,10 @@ body {
   @media (min-width: 769px) {
     body {
       line-height: 1.4; } }
-  body.mod-disable-scroll {
-    overflow: hidden; }
+
+html.mod-disable-scroll,
+html.mod-disable-scroll body {
+  overflow: hidden; }
 
 img {
   max-width: 100%; }
@@ -1692,7 +1694,7 @@ img {
 
 @media (max-width: 769px) {
   .oi-floated-image--wraper {
-    margin: 0 -100px -70px -80px;
+    margin: 0 -100px -70px;
     -webkit-transform: rotate(15deg);
             transform: rotate(15deg); } }
 
@@ -1729,6 +1731,9 @@ img {
   overflow: hidden;
   border: none;
   cursor: pointer; }
+  @media (max-width: 769px) {
+    .oi-btn {
+      padding: 18px 25px 19px; } }
   .oi-btn:focus {
     outline: none; }
   .oi-btn img {
@@ -1736,10 +1741,6 @@ img {
     margin-right: 10px; }
   .oi-btn + .oi-btn {
     margin-left: 37px; }
-  @media (max-width: 769px) {
-    .oi-btn.oi-xs-block + .oi-btn.oi-xs-block {
-      margin-left: 0;
-      margin-top: 20px; } }
   .oi-btn.mod-primary {
     color: #000;
     background-color: #fffc00; }
@@ -1792,6 +1793,16 @@ img {
     .oi-btn.mod-file img {
       height: 33px;
       margin-right: 5px; }
+  @media (max-width: 769px) {
+    .oi-btn.oi-xs-block {
+      max-width: 350px; }
+    .oi-btn + .oi-btn {
+      margin-left: 0;
+      margin-top: 20px; }
+    .oi-text-center-xs .oi-btn.oi-xs-block,
+    .oi-text-center .oi-btn.oi-xs-block {
+      margin-left: auto;
+      margin-right: auto; } }
 
 .oi-grid-row {
   display: grid;
@@ -1983,7 +1994,8 @@ textarea.oi-form-control {
   padding-top: 60px;
   padding-bottom: 30px;
   display: none;
-  overflow: scroll; }
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; }
   .oi-popup.mod-open {
     display: block; }
   .oi-popup.mod-flex {
