@@ -1,5 +1,6 @@
 .oi-slider
   margin: 0 10px 30px
+  transition: opacity .5s
   picture
     display: block
     & + picture
@@ -12,14 +13,14 @@
       display: -webkit-flex
       display: flex
     picture
+      -webkit-flex-shrink: 0
+      flex-shrink: 0
       &:first-child
         margin-left: 25px
       & + picture
         margin-left: 10px
         margin-top: 0
       img
-        -webkit-flex-shrink: 0
-        flex-shrink: 0
         height: calc(100vh - 205px)
 
 .mCS-dark-3.mCSB_scrollTools_horizontal
@@ -31,4 +32,4 @@
 
 .mCSB_scrollTools.mCSB_scrollTools_horizontal
   left: 25px
-  right: 10vw
+  right: 25px
