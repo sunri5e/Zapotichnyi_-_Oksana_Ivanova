@@ -1,3 +1,24 @@
+@supports (not (display: grid))
+  .oi-grid-row.mod-cases
+    display: block
+    &:before,
+    &:after
+      content: ''
+      display: table
+    &:after
+      clear: both
+    & > *
+      width: 50%
+      float: left
+      &:nth-child(2) ~ *
+        margin-top: 30px
+      &:nth-child(odd)
+        padding-right: 22px
+      &:nth-child(even)
+        padding-left: 22px
+    &.mod-lg-col-3
+
+
 .oi-grid-row
   display: grid
   grid-template-columns: repeat(17, 1fr)

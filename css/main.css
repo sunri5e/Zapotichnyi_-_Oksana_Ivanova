@@ -1396,8 +1396,8 @@ table {
 @font-face {
   font-family: 'ProximaNova';
   font-weight: 300;
-  src: url("../fonts/351153_0_0.eot");
-  src: url("../fonts/351153_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/351153_0_0.woff2") format("woff2"), url("../fonts/351153_0_0.woff") format("woff"), url("../fonts/351153_0_0.ttf") format("truetype"); }
+  src: url("../fonts/351153_2_0.eot");
+  src: url("../fonts/351153_2_0.eot?#iefix") format("embedded-opentype"), url("../fonts/351153_2_0.woff2") format("woff2"), url("../fonts/351153_2_0.woff") format("woff"), url("../fonts/351153_2_0.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'ProximaNova';
@@ -1817,6 +1817,24 @@ img {
       margin-left: auto;
       margin-right: auto; } }
 
+@supports not (display: grid) {
+  .oi-grid-row.mod-cases {
+    display: block; }
+    .oi-grid-row.mod-cases:before, .oi-grid-row.mod-cases:after {
+      content: '';
+      display: table; }
+    .oi-grid-row.mod-cases:after {
+      clear: both; }
+    .oi-grid-row.mod-cases > * {
+      width: 50%;
+      float: left; }
+      .oi-grid-row.mod-cases > *:nth-child(2) ~ * {
+        margin-top: 30px; }
+      .oi-grid-row.mod-cases > *:nth-child(odd) {
+        padding-right: 22px; }
+      .oi-grid-row.mod-cases > *:nth-child(even) {
+        padding-left: 22px; } }
+
 .oi-grid-row {
   display: grid;
   grid-template-columns: repeat(17, 1fr); }
@@ -2137,7 +2155,7 @@ textarea.oi-form-control {
       opacity: .7; }
 
 .oi-slider {
-  margin: 0 10px 30px;
+  margin: 0 0 30px;
   transition: opacity .5s; }
   .oi-slider picture {
     display: block; }
@@ -2178,7 +2196,8 @@ textarea.oi-form-control {
   position: relative;
   position: relative;
   overflow: hidden;
-  height: 240px; }
+  height: 240px;
+  display: block; }
   @media (min-width: 769px) {
     .oi-thumb {
       height: 315px; } }
@@ -2406,8 +2425,8 @@ textarea.oi-form-control {
 
 @media (max-width: 769px) {
   .oi-timeline {
-    margin-left: -22px;
-    margin-right: -22px; } }
+    margin-left: -30px;
+    margin-right: -30px; } }
 
 .oi-timeline--title {
   font-size: 18px;
