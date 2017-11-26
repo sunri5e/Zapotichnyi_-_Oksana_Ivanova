@@ -1555,8 +1555,10 @@ img {
   .oi-section.mod-ovh-y {
     overflow-y: hidden; }
   @media (max-width: 769px) {
-    .oi-section.mod-xs-reset-overlay:before {
-      display: none; } }
+    .oi-section.mod-xs-reset-overlay {
+      min-height: auto; }
+      .oi-section.mod-xs-reset-overlay:before {
+        display: none; } }
 
 .oi-section--success {
   display: -ms-flexbox;
@@ -1805,7 +1807,10 @@ img {
       border-bottom: 1px solid black; }
     .oi-btn.mod-file img {
       height: 33px;
-      margin-right: 5px; }
+      margin-right: 12px; }
+      .oi-btn.mod-file img + * {
+        position: relative;
+        top: -2px; }
   @media (max-width: 769px) {
     .oi-btn.oi-xs-block {
       max-width: 350px; }
@@ -2197,7 +2202,8 @@ textarea.oi-form-control {
   position: relative;
   overflow: hidden;
   height: 240px;
-  display: block; }
+  display: block;
+  background-color: #000; }
   @media (min-width: 769px) {
     .oi-thumb {
       height: 315px; } }
