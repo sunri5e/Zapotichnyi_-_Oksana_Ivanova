@@ -5,6 +5,14 @@
   [data-gallery] &
     margin-bottom: 0
     margin-top: -30px
+  &.mod-xs-wrap
+    @media(max-width: $screen-sm + 1)
+      margin-bottom: -145px
+      .oi-header-nav
+        flex-direction: column
+        justify-content: center
+        & > * + *
+          margin-top: 20px
 
 .oi-header--address
   font-size: 18px
@@ -13,6 +21,8 @@
     line-height: 1.2
   a
     text-decoration: none
+    display: flex
+    align-items: center
     span
       border-bottom: 1px solid rgba(#fff, .4)
       transition: border-bottom .15s
@@ -21,6 +31,10 @@
         border-bottom: 1px solid rgba(#fff, 1)
     &.mod-small
       font-size: 15px
+    img
+      width: 16px
+      opacity: .4
+      margin-right: 7px
 
 .oi-header-nav
   display: flex
@@ -31,6 +45,7 @@
   [data-gallery] &
     padding-top: 0
     padding-bottom: 60px
+
 
 .oi-header-nav--logo
   display: block
@@ -43,8 +58,10 @@
   .oi-text-center-xs &
     @media(max-width: $screen-sm + 1)
       justify-content: center
+  &.mod-center
+    justify-content: center
   & > li + li
-    margin-left: 20px
+    margin-left: 30px
   img
     height: 20px
   a

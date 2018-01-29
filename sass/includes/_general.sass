@@ -5,10 +5,12 @@
 
 body
   font-family: 'ProximaNova'
-  font-size: 15px
-  line-height: 1.2
+  font-size: 18px
+  line-height: 1.17
+  color: rgba(0, 0, 0, .6)
   @media(min-width: $screen-sm + 1)
-    line-height: 1.4
+    line-height: 1.33
+    font-size: 21px
 html.mod-disable-scroll,
 html.mod-disable-scroll body
   overflow: hidden
@@ -33,3 +35,23 @@ img
           border-bottom: 1px solid rgba(#000, 1)
       &.mod-small
         font-size: 15px
+      img
+        width: 16px
+        opacity: .2
+        margin-right: 7px
+  &.mod-alternatiave
+    font-weight: normal
+    font-size: 21px
+    .oi-subsection
+      & + .oi-subsection
+        margin-top: 55px
+    a
+      color: #000
+      text-decoration: none
+      span
+        display: inline-block
+        border-bottom: 1px solid rgba(#000, .4)
+        transition: border-bottom .15s
+      &:hover
+        span
+          border-bottom: 1px solid rgba(#000, 1)
