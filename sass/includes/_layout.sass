@@ -5,9 +5,7 @@
   padding: 0 30px
   margin: 0 auto
   width: 100%
-  @media(min-width: $screen-md + 1)
-    padding: 0 60px
-  @media(min-width: $screen-lg + 1)
+  @media(min-width: $screen-sm + 1)
     padding: 0 120px
 
 .oi-section
@@ -92,7 +90,7 @@
 
 .oi-xs-section
   @media(max-width: $screen-sm + 1)
-    padding: 60px 0
+    padding: 40px 0
     &.mod-reset-pt
       padding-top: 0
     &.mod-reset-pb
@@ -102,7 +100,7 @@
       margin-right: -30px
       padding-left: 30px
       padding-right: 30px
-      margin-bottom: -60px
+      margin-bottom: -40px
 
 
 .oi-section--bg-img
@@ -145,16 +143,18 @@
 .oi-section--title
   font-family: ProximaNova
   font-size: 36px
-  font-weight: 300
+  font-weight: 700
   line-height: 1
   color: #000
   @media(min-width: $screen-sm + 1)
     line-height: .75
-    font-size: 43px
+    font-size: 60px
   & + *
     margin-top: 17px
     @media(min-width: $screen-sm + 1)
       margin-top: 23px
+      &.mod-md-large-indent
+          margin-top: 43px
   .oi-section.mod-fullscreen &
     line-height: 1
     @media(min-width: $screen-sm + 1)
@@ -162,25 +162,18 @@
     @media(min-width: $screen-lg + 1)
       line-height: .85
   .oi-section.mod-hero &
-    font-size: 30px
     line-height: 1.0
     @media(min-width: $screen-sm + 1)
-      line-height: .83
-      text-align: left
-      font-size: 60px
-      &.mod-bold
-        line-height: 1
+      line-height: 1
     & + *
       margin-top: 18px
   &.mod-bold
     line-height: 1
-    font-weight: 600
+    font-weight: 700
 
 .oi-subsection
   & + &
-    margin-top: 55px
-    @media(min-width: $screen-sm + 1)
-      margin-top: 40px
+    margin-top: 40px
   & + &.mod-large-offset
     margin-top: 80px
   & + &.mod-medium-offset
@@ -202,6 +195,10 @@
     & > .oi-text-block--img-holder
       margin-left: -15px
       margin-right: -15px
+  .oi-section--title
+    font-size: 36px
+    @media(min-width: $screen-sm + 1)
+      font-size: 43px
   @media(min-width: $screen-md + 1)
     .oi-text-block--img-holder
       padding-left: 30px
